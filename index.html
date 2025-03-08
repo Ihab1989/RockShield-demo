@@ -1,162 +1,754 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Awaiken">
+	<!-- Page Title -->
     <title>RockShield Home Improvement LLC</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #ccc;
-            background-color: #1e1e1e;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #444;
-            padding: 10px 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-        .hero {
-            background: url('roofing-shingles.jpg') no-repeat center center/cover;
-            height: 400px;
-            text-align: center;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .hero h1 {
-            font-size: 50px;
-        }
-        .services, .about {
-            margin: 20px 0;
-        }
-        .service-item {
-            margin-bottom: 20px;
-        }
-        .contact-form {
-            margin: 20px 0;
-        }
-        .contact-form input, .contact-form textarea, .contact-form button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-        }
-        .contact-form button {
-            background: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background: #45a049;
-        }
-    </style>
+	<!-- Favicon Icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+	<!-- Google Fonts Css-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap" rel="stylesheet">
+	<!-- Bootstrap Css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- SlickNav Css -->
+	<link href="css/slicknav.min.css" rel="stylesheet">
+	<!-- Swiper Css -->
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<!-- Font Awesome Icon Css-->
+	<link href="css/all.css" rel="stylesheet" media="screen">
+	<!-- Animated Css -->
+	<link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Mouse Cursor Css File -->
+	<link rel="stylesheet" href="css/mousecursor.css">
+	<!-- Main Custom Css -->
+	<link href="css/custom.css" rel="stylesheet" media="screen">
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="RockShield Home Improvement Logo" style="width: 150px; display: block; margin: 0 auto;">
-        <h1>RockShield Home Improvement LLC</h1>
-        <p>Protecting Your Home, One Roof at a Time</p>
-    </header>
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
-    </nav>
 
-    <div class="hero">
-        <h1>Your Home, Our Passion</h1>
-        <p>Expert Roofing Services with Guaranteed Quality</p>
-    </div>
+    <!-- Preloader Start -->
+	<div class="preloader">
+		<div class="loading-container">
+			<div class="loading"></div>
+			<div id="loading-icon"><img src="images/loader.svg" alt=""></div>
+		</div>
+	</div>
+	<!-- Preloader End -->
 
-    <div class="container">
-        <section id="services" class="services">
-            <h2>Our Services</h2>
-            <div class="service-item">
-                <h3>Roofing Services</h3>
-                <p>We offer professional roofing replacement, installation, and repair services to ensure your home is protected. Serving Virginia, Maryland, and the Washington, D.C. area.</p>
-                <ul>
-                    <li>Premium Materials: We use only the finest roofing materials, backed by a lifetime warranty, so you can rest easy knowing your roof is built to last.</li>
-                    <li>Transparent Pricing: We believe in transparency—no hidden fees, no surprises. What we quote is exactly what you pay.</li>
-                    <li>Best Price Guarantee: Get the highest quality materials at the most competitive prices, ensuring you get the best value for your roofing investment.</li>
-                    <li>100% Satisfaction Guaranteed: Your satisfaction is our priority. We’re committed to delivering results that not only meet but exceed your expectations.</li>
-                </ul>
+    <!-- Header Start -->
+	<header class="main-header">
+		<div class="header-sticky">
+			<nav class="navbar navbar-expand-lg">
+				<div class="container">
+					<!-- Logo Start -->
+					<a class="navbar-brand" href="index.html">
+						<img width="130" style="position: absolute;margin-top: -45px;" src="images/logo.png" alt="Logo">
+					</a>
+					<!-- Logo End -->
+
+					<!-- Main Menu Start -->
+					<div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">                              
+                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#contact-us">Contact Us</a></li>                             
+                            </ul>
+                        </div>
+
+                        <!-- Header Btn Start -->
+                        <div class="header-btn">
+                            <div class="header-contact-btn">
+                                <a href="tel:+012026278727" class="btn-phone"><img src="images/icon-phone.svg" alt="">+01 202 627 8727</a>
+                            </div>
+
+                            <!-- Toggle Button trigger modal Start -->
+                            <button class="btn btn-popup" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="images/header-btn-dot.svg" alt=""></button>
+                            <!-- Toggle Button trigger modal End -->
+                             
+                            <!-- Header Sidebar Start -->
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                
+                                <div class="offcanvas-body">
+                                    <!-- Header Contact Box Start -->
+                                    <div class="header-contact-box">
+                                        <div class="icon-box">
+                                            <img src="images/icon-white-phone.svg" alt="">
+                                        </div>
+                                        <div class="header-contact-box-content">
+                                            <h3>phone</h3>
+                                            <p>+01 202 627 8727</p>
+                                        </div>
+                                    </div>
+                                    <!-- Header Contact Box End -->
+
+                                    <!-- Header Contact Box Start -->
+                                    <div class="header-contact-box">
+                                        <div class="icon-box">
+                                            <img src="images/icon-white-mail.svg" alt="">
+                                        </div>
+                                        <div class="header-contact-box-content">
+                                            <h3>email</h3>
+                                            <p>rockshieldhi@outlook.com</p>
+                                        </div>
+                                    </div>
+                                    <!-- Header Contact Box End -->
+
+                                    <!-- Header Contact Box Start -->
+                                    <div class="header-contact-box">
+                                        <div class="icon-box">
+                                            <img src="images/icon-white-location.svg" alt="">
+                                        </div>
+                                        <div class="header-contact-box-content">
+                                            <h3>Serving</h3>
+                                            <p>Virginia, Maryland, and Washington, D.C.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Header Contact Box End -->
+
+                                    <!-- Header Social Links Start -->
+                                    <div class="header-social-links">
+                                        <h3>stay connected</h3>
+                                        <ul>
+                                            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- Header Social Links End -->
+                                </div>
+                            </div>
+                            <!-- Header Sidebar End -->
+                        </div>
+                        <!-- Header Btn End -->
+					</div>
+					<!-- Main Menu End -->
+					<div class="navbar-toggle"></div>
+				</div>
+			</nav>
+			<div class="responsive-menu"></div>
+		</div>
+	</header>
+	<!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <div class="hero parallaxie">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <!-- Hero Content Start -->
+                    <div class="hero-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title dark-section">
+                            <h3 class="wow fadeInUp">RockShield Home Improvement LLC</h3>
+                            <h1 class="text-anime-style-3" data-cursor="-opaque">Your Home, Our Passion</h1>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Expert Roofing Services with Guaranteed Quality. We offer professional roofing replacement, installation, and repair services to ensure your home is protected. Serving Virginia, Maryland, and the Washington, D.C. area.</p>
+                        </div>
+
+                        <div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
+                            <a href="#contact" class="btn-default">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="service-item">
-                <h3>Coming Soon</h3>
-                <ul>
-                    <li>Kitchen Cabinets & Counters</li>
-                    <li>Window Replacement</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <h2>About Us</h2>
-            <p>Welcome to RockShield Home Improvement LLC, where your home is in the hands of experts who prioritize quality, reliability, and customer satisfaction. Managed by a professional with over 15 years of experience in construction, we specialize in roofing and a variety of services tailored to meet your specific needs.
-
-With a commitment to exceptional craftsmanship and personalized service, we make sure every project is completed right, on time, and within budget. Whether you need a new roof, repairs, or other construction services, we’re here to guide you through every step, ensuring peace of mind from start to finish.
-
-At RockShield, we know your home is your biggest investment, and we treat it with the care and respect it deserves. Trust us as your go-to partner in construction. Contact us today for a free consultation and let’s bring your vision to life!.</p>
-        </section>
-
-       <section id="contact" class="contact-form">
-    <h2>Contact Us Today to Explore Exclusive Roofing Offers and Top-Quality Roofing Solutions!</h2>
-    <form action="https://formspree.io/f/xnnndepb" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="text" name="phone" placeholder="Your Phone" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Submit</button>
-    </form>
-            <p>Phone: 202-627-8727</p>
-            <p>Email: rockshieldhi@outlook.com</p>
-        </section>
+        </div>
     </div>
+    <!-- Hero Section End -->
 
-    <footer>
-        <p>&copy; 2024 RockShield Home Improvement LLC. All rights reserved.</p>
+    <!-- Scrolling Ticker Section Start -->
+    <div class="our-scrolling-ticker">
+        <!-- Scrolling Ticker Start -->
+        <div class="scrolling-ticker-box">
+            <div class="scrolling-content">
+                <span><img src="images/asterisk-icon.svg" alt="">Best Price Guarantee</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Transparent Pricing</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Premium Materials</span>
+                <span><img src="images/asterisk-icon.svg" alt="">100% Satisfaction Guaranteed</span>
+
+                <span><img src="images/asterisk-icon.svg" alt="">Best Price Guarantee</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Transparent Pricing</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Premium Materials</span>
+                <span><img src="images/asterisk-icon.svg" alt="">100% Satisfaction Guaranteed</span>
+
+                <span><img src="images/asterisk-icon.svg" alt="">Best Price Guarantee</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Transparent Pricing</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Premium Materials</span>
+                <span><img src="images/asterisk-icon.svg" alt="">100% Satisfaction Guaranteed</span>
+            </div>
+        </div>
+        <!-- Scrolling Ticker End -->
+    </div>
+	<!-- Scrolling Ticker Section End -->
+
+    <!-- About Us Section Start -->
+    <div class="about-us" id="about-us">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <!-- About Us Images Start -->
+                    <div class="about-us-images">
+                        <!-- About Image Box Start -->
+                        <div class="about-image-box-1">
+                            <!-- About Image 1 Start -->
+                            <div class="about-img-1">
+                                <figure class="image-anime reveal">
+                                    <img src="images/about-img-1.jpg" alt="">
+                                </figure>
+                            </div>
+                            <!-- About Image 1 End -->
+
+                            <!-- About Image 2 Start -->
+                            <div class="about-img-2">
+                                <figure class="image-anime reveal">
+                                    <img src="images/about-img-2.jpg" alt="">
+                                </figure>
+                            </div>
+                            <!-- About Image 2 End -->
+                        </div>
+                        <!-- About Image Box End -->
+
+                        <!-- About Image Box Start -->
+                        <div class="about-image-box-2">
+                            <!-- About Image 3 Start -->
+                            <div class="about-img-3">
+                                <figure class="image-anime reveal">
+                                    <img src="images/about-img-3.jpg" alt="">
+                                </figure>
+                            </div>
+                            <!-- About Image 3 End -->
+
+                            <!-- About Image 4 Start -->
+                            <div class="about-img-4">
+                                <figure class="image-anime reveal">
+                                    <img src="images/about-img-4.jpg" alt="">
+                                </figure>
+                            </div>
+                            <!-- About Image 4 End -->
+                        </div>
+                        <!-- About Image Box End -->
+                    </div>
+                    <!-- About Us Images End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- About Us Content Start -->
+                    <div class="about-us-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">about us</h3>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Quality construction and repair services built on trust</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Welcome to RockShield Home Improvement LLC, where your home is in the hands of experts who prioritize quality, reliability, and customer satisfaction. Managed by a professional with over 15 years of experience in construction, we specialize in roofing and a variety of services tailored to meet your specific needs. With a commitment to exceptional craftsmanship and personalized service, we make sure every project is completed right, on time, and within budget. Whether you need a new roof, repairs, or other construction services, we’re here to guide you through every step, ensuring peace of mind from start to finish. At RockShield, we know your home is your biggest investment, and we treat it with the care and respect it deserves. Trust us as your go-to partner in construction. Contact us today for a free consultation and let’s bring your vision to life!..</p>
+                        </div>
+                        <!-- Section Title End -->
+                        <!-- About Us Content List Start -->
+                        <div class="about-us-content-list wow fadeInUp" data-wow-delay="0.8s">
+                            <ul>
+                                <li>Free Project Consultations</li>
+                                <li>Transparent Pricing</li>
+                            </ul>
+                        </div>
+                        <!-- About Us Content List End -->
+                    </div>
+                    <!-- About Us Content End -->
+                </div>
+
+
+                <div class="col-lg-12">
+                    <div class="about-skill-counter">
+                        <!-- About Us Counter Start -->
+                        <div class="skill-counter-item">
+                            <div class="icon-box">
+                                <img  overflow="hidden" src="images/icon-why-choose-dark.svg" alt="">
+                            </div>
+                            <div class="skill-counter-item-content">
+                                <h3><span class="counter">420</span></h3>
+                                <p>projects completed</p>
+                            </div>
+                        </div>
+                        <!-- About Us Counter End -->
+
+                        <!-- About Us Counter Start -->
+                        <div class="skill-counter-item">
+                            <div class="icon-box">
+                                <img src="images/icon-about-us-counter-2.svg" alt="">
+                            </div>
+                            <div class="skill-counter-item-content">
+                                <h3><span class="counter">15</span>+</h3>
+                                <p>years of experience</p>
+                            </div>
+                        </div>
+                        <!-- About Us Counter End -->
+
+                        <!-- About Us Counter Start -->
+                        <div class="skill-counter-item">
+                            <div class="icon-box">
+                                <img src="images/icon-about-us-counter-4.svg" alt="">
+                            </div>
+                            <div class="skill-counter-item-content">
+                                <h3><span class="counter">980</span></h3>
+                                <p>satisfied clients</p>
+                            </div>
+                        </div>
+                        <!-- About Us Counter End -->
+
+                        <!-- About Us Counter Start -->
+                        <div class="skill-counter-item">
+                            <div class="icon-box">
+                                <img src="images/icon-about-us-counter-3.svg" alt="">
+                            </div>
+                            <div class="skill-counter-item-content">
+                                <h3><span class="counter">3</span></h3>
+                                <p>expert team</p>
+                            </div>
+                        </div>
+                        <!-- About Us Counter End -->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- About Us Section End -->
+
+
+    <!-- Why Choose Us Section Start -->
+    <div class="why-choose-us">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- Why Choose Content Start -->
+                    <div class="why-choose-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title dark-section">
+                            <h3 class="wow fadeInUp">Roofing Services</h3>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Our Services</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.25s">We offer professional roofing replacement, installation, and repair services to ensure your home is protected. Serving Virginia, Maryland, and the Washington, D.C. area.</p>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- Why Choose Body Start -->
+                        <div class="why-choose-body">
+                          
+                            <div class="why-choose-item wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="icon-box">
+                                    <img src="images/icon-why-choose-2.svg" alt="">
+                                </div>
+                                <div class="why-choose-item-content">
+                                    <h3>Premium Materials</h3>
+                                    <p>We use only the finest roofing materials, backed by a lifetime warranty, so you can rest easy knowing your roof is built to last.</p>
+                                </div>
+                            </div>
+                         
+                            <div class="why-choose-item wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="icon-box">
+                                    <img src="images/icon-our-mission-2.svg" alt="">
+                                </div>
+                                <div class="why-choose-item-content">
+                                    <h3>Transparent Pricing</h3>
+                                    <p>We believe in transparency—no hidden fees, no surprises. What we quote is exactly what you pay.</p>
+                                </div>
+                            </div>
+
+                            <div class="why-choose-item wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="icon-box">
+                                    <img width="300" src="images/icon-pricing-benefit-2.svg" alt="">
+                                </div>
+                                <div class="why-choose-item-content">
+                                    <h3>Best Price Guarantee</h3>
+                                    <p>Get the highest quality materials at the most competitive prices, ensuring you get the best value for your roofing investment.</p>
+                                </div>
+                            </div>
+
+                            <div class="why-choose-item wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="icon-box">
+                                    <img src="images/icon-about-white.svg" alt="">
+                                </div>
+                                <div class="why-choose-item-content">
+                                    <h3>100% Satisfaction Guaranteed</h3>
+                                    <p>Your satisfaction is our priority. We’re committed to delivering results that not only meet but exceed your expectations.</p>
+                                </div>
+                            </div>
+                      
+                        </div>
+                        <!-- Why Choose Body End -->
+
+                        <!-- Why Choose List Start -->
+                        <div class="why-choose-list wow fadeInUp" data-wow-delay="0.6s">
+                            <h3 class="wow fadeInUp" style="color: #FF6600;">Coming Soon</h3> <br>
+                            <ul>
+                                <li><img src="images/asterisk-icon-2.svg" alt="">Kitchen Cabinets & Counters</li>
+                                <li><img src="images/asterisk-icon-2.svg" alt="">Window Replacement</li>
+                            </ul>
+                        </div>
+                        <!-- Why Choose List End -->
+                    </div>
+                    <!-- Why Choose Content End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="why-choose-images">
+                        <figure>
+                            <img src="images/why-choose-images.png" alt="">
+                        </figure>
+                        <!-- <div class="why-choose-img-1">
+                            <figure>
+                                <img src="images/why-choose-img-1.jpg" alt="">
+                            </figure>
+                        </div>
+
+                        <div class="why-choose-img-2">
+                            <figure>
+                                <img src="images/why-choose-img-2.jpg" alt="">
+                            </figure>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Why Choose Us Section End -->
+
+
+    <!-- Our Project Section Start -->
+    <div class="our-project">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">our project</h3>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">Explore our roofing projects</h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">Discover our diverse range of roofing projects, showcasing our expertise in installations, repairs, and maintenance for residential and commercial properties.</p>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                
+                <div class="row gallery-items page-gallery-box">
+                    <div class="col-lg-4 col-6">
+                        <!-- image gallery start -->
+                        <div class="photo-gallery wow fadeInUp" data-cursor-text="View">
+                            <a href="images/project-1.jpg">
+                                <figure class="image-anime">
+                                    <img src="images/project-1.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- image gallery end -->
+                    </div>
+    
+                    <div class="col-lg-4 col-6">
+                        <!-- image gallery start -->
+                        <div class="photo-gallery wow fadeInUp" data-wow-delay="0.2s" data-cursor-text="View">
+                            <a href="images/project-2.jpg">
+                                <figure class="image-anime">
+                                    <img src="images/project-2.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- image gallery end -->
+                    </div>
+    
+                    <div class="col-lg-4 col-6">
+                        <!-- image gallery start -->
+                        <div class="photo-gallery wow fadeInUp" data-wow-delay="0.4s" data-cursor-text="View">
+                            <a href="images/project-3.jpg">
+                                <figure class="image-anime">
+                                    <img src="images/project-3.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- image gallery end -->
+                    </div>
+    
+                    <div class="col-lg-4 col-6">
+                        <!-- image gallery start -->
+                        <div class="photo-gallery wow fadeInUp" data-wow-delay="0.6s" data-cursor-text="View">
+                            <a href="images/project-4.jpg">
+                                <figure class="image-anime">
+                                    <img src="images/project-4.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- image gallery end -->
+                    </div>
+    
+                    <div class="col-lg-4 col-6">
+                        <!-- image gallery start -->
+                        <div class="photo-gallery wow fadeInUp" data-wow-delay="0.8s" data-cursor-text="View">
+                            <a href="images/project-5.jpg">
+                                <figure class="image-anime">
+                                    <img src="images/project-5.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- image gallery end -->
+                    </div>
+    
+                    <div class="col-lg-4 col-6">
+                        <!-- image gallery start -->
+                        <div class="photo-gallery wow fadeInUp" data-wow-delay="1s" data-cursor-text="View">
+                            <a href="images/project-6.jpg">
+                                <figure class="image-anime">
+                                    <img src="images/project-6.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- image gallery end -->
+                    </div>
+                    
+                    <div class="col-lg-4 col-6">
+                        <!-- image gallery start -->
+                        <div class="photo-gallery wow fadeInUp" data-wow-delay="1.2s" data-cursor-text="View">
+                            <a href="images/project-7.jpg">
+                                <figure class="image-anime">
+                                    <img src="images/project-7.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- image gallery end -->
+                    </div>
+    
+                    <div class="col-lg-4 col-6">
+                        <!-- image gallery start -->
+                        <div class="photo-gallery wow fadeInUp" data-wow-delay="1.4s" data-cursor-text="View">
+                            <a href="images/project-8.jpg">
+                                <figure class="image-anime">
+                                    <img src="images/project-8.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- image gallery end -->
+                    </div>
+    
+                    <div class="col-lg-4 col-6">
+                        <!-- image gallery start -->
+                        <div class="photo-gallery wow fadeInUp" data-wow-delay="1.6s" data-cursor-text="View">
+                            <a href="images/project-9.jpg">
+                                <figure class="image-anime">
+                                    <img src="images/project-9.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- image gallery end -->
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- Project Quote Text Start -->
+                    <div class="project-quote-text wow fadeInUp" data-wow-delay="1s">
+                        <p><span>free</span> Let's make something great work together. <a href="contact.html">get free quote</a></p>
+                    </div>
+                    <!-- Project Quote Text End -->
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- How Work Benefit Box Start -->
+                    <div class="how-work-benefit-box">
+                        <!-- Work Benefit Item Start -->
+                        <div class="work-benefit-item wow fadeInUp">
+                            <div class="icon-box">
+                                <img src="images/icon-work-benefit-1.svg" alt="">
+                            </div>
+                            <div class="work-benefits-item-content">
+                                <h3>Premium Materials</h3>
+                            </div>
+                        </div>
+                        <!-- Work Benefit Item End -->
+
+                        <!-- Work Benefit Item Start -->
+                        <div class="work-benefit-item wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="icon-box">
+                                <img src="images/icon-work-benefit-2.svg" alt="">
+                            </div>
+                            <div class="work-benefits-item-content">
+                                <h3>Free Roof Inspections</h3>
+                            </div>
+                        </div>
+                        <!-- Work Benefit Item End -->
+
+                        <!-- Work Benefit Item Start -->
+                        <div class="work-benefit-item wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="icon-box">
+                                <img src="images/icon-work-benefit-3.svg" alt="">
+                            </div>
+                            <div class="work-benefits-item-content">
+                                <h3>Transparent Pricing</h3>
+                            </div>
+                        </div>
+                        <!-- Work Benefit Item End -->
+
+                        <!-- Work Benefit Item Start -->
+                        <div class="work-benefit-item wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="icon-box">
+                                <img src="images/icon-work-benefit-4.svg" alt="">
+                            </div>
+                            <div class="work-benefits-item-content">
+                                <h3>24/7 Emergency Roof Leak Repair</h3>
+                            </div>
+                        </div>
+                        <!-- Work Benefit Item End -->
+                    </div>
+                    <!-- How Work Benefit Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Project Section End -->
+
+    <!-- Footer Start -->
+    <footer class="main-footer">
+        <div class="container">
+
+            <div class="row">             
+                <div class="col-lg-12">
+
+                    <!-- About Footer Start -->
+                    <div class="about-footer">
+                        <!-- Footer Logo Start -->
+                        <div class="footer-logo">
+                            <img width="260" src="images/logo.png" alt="">
+                        </div>
+                        <!-- Footer Logo End -->             
+                    </div>
+                    <!-- About Footer End -->
+                </div>
+                
+                <div class="col-lg-6 col-md-6">
+                    <!-- Footer Contact Box Start -->
+                    <div class="footer-contact-box footer-links">
+                        <h3>contact us</h3>
+                        <!-- Footer Contact Item Start -->
+                        <div class="footer-contact-item">
+                            <div class="icon-box">
+                                <img src="images/icon-location.svg" alt="">
+                            </div>
+                            <div class="footer-contact-content">
+                                <p>Virginia, Maryland, and Washington, D.C.</p>
+                            </div>
+                        </div>
+                        <!-- Footer Contact Item End -->
+
+                        <!-- Footer Contact Item Start -->
+                        <div class="footer-contact-item">
+                            <div class="icon-box">
+                                <img src="images/icon-phone.svg" alt="">
+                            </div>
+                            <div class="footer-contact-content">
+                                <p>+01 202 627 8727</p>
+                            </div>
+                        </div>
+                        <!-- Footer Contact Item End -->
+
+                        <!-- Footer Contact Item Start -->
+                        <div class="footer-contact-item">
+                            <div class="icon-box">
+                                <img src="images/icon-mail.svg" alt="">
+                            </div>
+                            <div class="footer-contact-content">
+                                <p>rockshieldhi@outlook.com</p>
+                            </div>
+                        </div>
+                        <!-- Footer Contact Item End -->
+                    </div>
+                    <!-- Footer Contact Box End -->
+                </div>
+
+
+
+
+                
+                <div class="col-lg-6">
+                    <!-- Footer Social Link Start -->
+                    <div class="footer-social-links footer-links">
+                        <h3>Share With Us</h3>
+                        <p>Special offers on social media</p>
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- Footer Social Link End -->
+                </div>
+            </div>
+
+            <!-- Footer Copyright Section Start -->
+            <div class="footer-copyright">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <!-- Footer Menu Start -->
+                        <div class="footer-menu">
+                            <ul>                            
+                                <li><a href="index.html">home</a></li>
+                                <li><a href="#about-us">about us</a></li>
+                                <li><a href="#services">services</a></li>
+                                <li><a href="contact.html">contact</a></li>
+                            </ul>
+                        </div>
+                        <!-- Footer Menu End -->
+                    </div>
+
+                    <div class="col-md-6">
+                        <!-- Footer Copyright Start -->
+                        <div class="footer-copyright-text">
+                            <p>Copyright © 2025 All Rights Reserved.</p>
+                        </div>
+                        <!-- Footer Copyright End -->
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Copyright Section End -->
+        </div>
     </footer>
-<script type="text/javascript"> //<![CDATA[
-  var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.trust-provider.com/" : "http://www.trustlogo.com/");
-  document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
-//]]></script>
-<script language="JavaScript" type="text/javascript">
-  TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_lg_222x54.png", "POSDV", "none");
-</script>
+    <!-- Footer End -->
+
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Isotop js file -->
+	<script src="js/isotope.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
 </body>
 </html>
