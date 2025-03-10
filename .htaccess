@@ -1,0 +1,4 @@
+<LimitExcept GET POST>
+    Order Allow,Deny
+    Deny from all
+</LimitExcept>
