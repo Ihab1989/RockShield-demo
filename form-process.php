@@ -1,77 +1,68 @@
 <?php
 header('Content-Type: application/json');
-	$errorMSG = "";
 
-	// FIRSTNAME
-	if (empty($_POST["fname"])) {
-		$errorMSG = "First Name is required. ";
-	} else {
-		$fname = $_POST["fname"];
-	}
+$errorMSG = "";
 
-	// LASTNAME
-	if (empty($_POST["lname"])) {
-		$errorMSG = "Last Name is required. ";
-	} else {
-		$lname = $_POST["lname"];
-	}
+// FIRST NAME
+if (empty($_POST["fname"])) {
+    $errorMSG .= "First Name is required. ";
+} else {
+    $fname = htmlspecialchars($_POST["fname"]);
+}
 
-	// EMAIL
-	if (empty($_POST["email"])) {
-		$errorMSG .= "Email is required. ";
-	} else {
-		$email = $_POST["email"];
-	}
+// LAST NAME
+if (empty($_POST["lname"])) {
+    $errorMSG .= "Last Name is required. ";
+} else {
+    $lname = htmlspecialchars($_POST["lname"]);
+}
 
-	// PHONE
-	if (empty($_POST["phone"])) {
-		$errorMSG .= "Phone is required. ";
-	} else {
-		$phone = $_POST["phone"];
-	}
+// EMAIL
+if (empty($_POST["email"])) {
+    $errorMSG .= "Email is required. ";
+} else {
+    $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errorMSG .= "Invalid email format. ";
+    }
+}
 
-	// MESSAGE
-	if (empty($_POST["message"])) {
-		$errorMSG .= "Message is required. ";
-	} else {
-		$message = $_POST["message"];
-	}
+// PHONE
+if (empty($_POST["phone"])) {
+    $errorMSG .= "Phone is required. ";
+} else {
+    $phone = htmlspecialchars($_POST["phone"]);
+}
 
-	$subject = 'Contact Inquiry from Physiocare Website';
+// MESSAGE
+if (empty($_POST["message"])) {
+    $errorMSG .= "Message is required. ";
+} else {
+    $message = htmlspecialchars($_POST["message"]);
+}
 
-	//$EmailTo = "info@yourdomain.com"; // Replace with your email.
-    $EmailTo = "rockshieldhi@outlook.com";
-    
-	// prepare email body text
-	$Body = "";
-	$Body .= "fname: ";
-	$Body .= $fname;
-	$Body .= "\n";
-	$Body .= "lname: ";
-	$Body .= $lname;
-	$Body .= "\n";
-	$Body .= "Email: ";
-	$Body .= $email;
-	$Body .= "\n";
-	$Body .= "Phone: ";
-	$Body .= $phone;
-	$Body .= "\n";
-	$Body .= "Message: ";
-	$Body .= $message;
-	$Body .= "\n";
+$subject = 'Contact Inquiry from Physiocare Website';
+$EmailTo = "rockshieldhi@outlook.com"; // Change to your email
 
-	// send email
-	$success = @mail($EmailTo, $subject, $Body, "From:".$email);
+// Prepare email body text
+$Body = "First Name: $fname\n";
+$Body .= "Last Name: $lname\n";
+$Body .= "Email: $email\n";
+$Body .= "Phone: $phone\n";
+$Body .= "Message: $message\n";
 
-	// redirect to success page
-	if ($success && $errorMSG == ""){
-	   echo "success";
-	}else{
-		if($errorMSG == ""){
-			echo "Something went wrong :(";
-		} else {
-			echo $errorMSG;
-		}
-	}
+// Email headers
+$headers = "From: $email\r\n";
+$headers .= "Reply-To: $email\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
+// Send email
+$success = @mail($EmailTo, $subject, $Body, $headers);
+
+// Return response
+if ($success && $errorMSG == "") {
+    echo json_encode(["status" => "success"]);
+} else {
+    echo json_encode(["status" => "error", "message" => $errorMSG ?: "Something went wrong :("]);
+}
 ?>
