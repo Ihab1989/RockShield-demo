@@ -40,7 +40,7 @@ header('Content-Type: application/json');
 	$subject = 'Contact Inquiry from Physiocare Website';
 
 	//$EmailTo = "info@yourdomain.com"; // Replace with your email.
-    $EmailTo = "ihabboush@icloud.com";
+    $EmailTo = "rockshieldhi@outlook.com";
     
 	// prepare email body text
 	$Body = "";
